@@ -15,7 +15,9 @@ def prime_checker(prime_number):
 for i in range(2,divide_range):
     prime_checker(prime_number=i)
 
+for j in prime_numbers:
+    if number % j == 0:
+        largest_prime = j
+
 print(prime_numbers)
-
-
-
+print(largest_prime)
