@@ -1,15 +1,21 @@
-#The prime factors of 13195 are 5, 7, 13 and 29.
-#What is the largest prime factor of the number 600851475143 ?
 number = int(input("Please Enter the number you want to Check: "))
-divisor = 1
-all_divisors = []
-for divisor in range (1,11):
-    answer = number % divisor
-    if answer == 0:
-        all_divisors.append(divisor)
-    divisor += 1
+#Checking Prime Numbers
+prime_numbers=[]
+divide_range = int(number/2)
 
+def prime_checker(prime_number):
+    is_prime = True
+    for i in range(2,prime_number):
+        if prime_number % i == 0:
+            is_prime = False
+    if is_prime:
+        prime_numbers.append(prime_number)
+    
 
-print(all_divisors)
+for i in range(2,divide_range):
+    prime_checker(prime_number=i)
+
+print(prime_numbers)
+
 
 
